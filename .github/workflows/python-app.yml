@@ -1,0 +1,21 @@
+name: ridi_crawler
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3
+      - name: 1. List files
+        run: ls -al
+      - name: 2. Check Python packages
+        run: pip list
+      - name: 3. Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: 4. Install required packages
+        run: pip install -r requirements.txt
+      - name: 5. Run crawler.py
+        run: python crawler.py
+
+    
