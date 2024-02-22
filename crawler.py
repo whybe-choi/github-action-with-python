@@ -8,6 +8,6 @@ html = response.text
 
 soup = BeautifulSoup(html, 'html.parser')
 
-bookservies = soup.select('.title_text')
+bookservices = soup.select('.title_text')
 for no, book in enumerate(bookservices, 1):
   print(no, book.text.strip())
