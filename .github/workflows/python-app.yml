@@ -1,6 +1,8 @@
 name: ridi_crawler
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
